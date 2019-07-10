@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	  <meta charset="UTF-8" />
-	  <link rel="stylesheet" href="./Resource/style.css" />
-	</head>
 
-	<body>
-		<audio id="player" autoplay loop>
-			<source src="./Music/seashanty.mp3" type="audio/mp3">
-		</audio> 
-		<iframe src="./Music/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+<script>
+	var myQuotes = new Array();
+	myQuotes[0] = "&quot;I think I had enough of this shit chat&quot; - 100Club";
+	myQuotes[1] = "&quot;Because segregation is the path forward.&quot; - Hope";
+	myQuotes[2] = "&quot;curse you, trap spongebob&quot; - This is Epic";
+	myQuotes[3] = "&quot;Nobody here knows how to respond because a kiss is a foreign concept.&quot; - Hope"
+	myQuotes[4] = "&quot;Pizza Hut fucking sucks so bad&quot; - MrMaxAwesome"
+
+	var myRandom = Math.floor(Math.random()*myQuotes.length);
+</script>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./Resource/style.css" />
+  </head>
+
+<body>
+	<audio id="player" autoplay loop>
+		<source src="./Music/seashanty.mp3" type="audio/mp3">
+	</audio> 
+	<iframe src="./Music/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
 
 
-		<div id="content">
-			<div id="background"></div>
-			<div id="vhs"></div>
-			<h1>
-				Welcome back to ChatotDungeon.com
-				<br><br>
-				<img src="./Resource/dance.gif">
-				<br><br>
-				<small> 
-					"I think I had enough of this shit chat" - 100Club
-				</small>
-			</h1>
-		</div>
-	</body>
+	<div id="content">
+		<div id="background"></div>
+		<div id="vhs"></div>
+		<h1>
+			Welcome back to ChatotDungeon.com
+			<br><br>
+			<img src="./Resource/dance.gif">
+			<br><br>
+			<small> 
+				<p id="myQuote">Quote</p>
+			</small>
+		</h1>
+	</div>
+</body>
+
+<script>
+	document.getElementById('myQuote').innerHTML=myQuotes[myRandom];
+</script>
+
 </html>
